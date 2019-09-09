@@ -1,0 +1,6 @@
+site_name: TheCodingMonkey.Math Documentation
+docs_dir: 'Docs'
+theme: 'readthedocs'
+
+markdown_extensions:
+    - sane_lists
