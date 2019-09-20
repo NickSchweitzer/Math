@@ -82,8 +82,7 @@ namespace TheCodingMonkey.Math
         /// <param name="items">IEnumerable of items to determine the statistical mode of.</param>
         /// <returns>An IList of Tuples where Value is the item that has the most items, and Count is the count of that item.</returns>
         public static IList<(T Value, int Count)> Mode<T>(this IEnumerable<T> items)
-        {
-            
+        {            
             Dictionary<T, int> counts = new Dictionary<T, int>();
             foreach (T item in items)
             {

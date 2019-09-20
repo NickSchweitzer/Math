@@ -37,5 +37,14 @@ namespace TheCodingMonkey.Math.Tests
             CollectionAssert.Contains(modes, (5, 2));
             CollectionAssert.Contains(modes, (15, 2));
         }
+
+        public void IntegerMedianTest()
+        {
+            var oddNumber = new int[] { 1, 5, 8, 2, 20, 15, 0, 55, 3 };
+            var evenNumber = new int[] { 1, 5, 8, 2, 20, 15, 0, 55, 3, 65 };
+
+            Assert.AreEqual(5, oddNumber.Median());
+            Assert.AreEqual(6.5, evenNumber.Median());
+        }
     }
 }
