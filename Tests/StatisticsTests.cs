@@ -5,10 +5,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TheCodingMonkey.Math.Tests
 {
-    [TestClass]
+    [TestClass, TestCategory("Statistics")]
     public class StatisticsTests
     {
-        [TestMethod, TestCategory("Statistics")]
+        [TestMethod]
         public void NoModesTest()
         {
             var testValues = new int[] { };
@@ -16,7 +16,7 @@ namespace TheCodingMonkey.Math.Tests
             Assert.AreEqual(0, modes.Count);
         }
 
-        [TestMethod, TestCategory("Statistics")]
+        [TestMethod]
         public void SingleModeTest()
         {
             var testValues = new int[] { 1, 10, 2, 8, 16, 37, 19, 10, 10, 5, 10, 2 };
@@ -26,7 +26,7 @@ namespace TheCodingMonkey.Math.Tests
             Assert.AreEqual(4, modes.First().Count);
         }
 
-        [TestMethod, TestCategory("Statistics")]
+        [TestMethod]
         public void MultipleModesTest()
         {
             var testValues = new int[] { 1, 10, 15, 2, 8, 5, 2, 15, 20, 100, 5 };
@@ -38,6 +38,7 @@ namespace TheCodingMonkey.Math.Tests
             CollectionAssert.Contains(modes, (15, 2));
         }
 
+        [TestMethod]
         public void IntegerMedianTest()
         {
             var oddNumber = new int[] { 1, 5, 8, 2, 20, 15, 0, 55, 3 };

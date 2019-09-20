@@ -126,7 +126,7 @@ namespace TheCodingMonkey.Math
                 if (first == second)
                     return first;
                 else
-                    return (first + second) / 2;
+                    return (first + second) / 2d;
             }
         }
 
