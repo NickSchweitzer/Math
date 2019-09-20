@@ -13,8 +13,9 @@ namespace TheCodingMonkey.Math
 
         // All Roman Numerals which are powers of 10 and their corresponding integer values.
         // These are the ones that can be repeated and subtracted.
-        private static readonly char[] LETTERS_10 = { 'I', 'X', 'C', 'M'  };
-        private static readonly int[]  NUMBERS_10 = {  1,   10, 100, 1000 };
+        private static readonly char[] LETTERS_10       = { 'I', 'X', 'C', 'M' };
+        private static readonly char[] LETTERS_10_SMALL = { 'i', 'x', 'c', 'm' };
+        private static readonly int[]  NUMBERS_10       = {  1,   10, 100, 1000 };
 
         /// <summary>Represents the smallest possible integer that can be converted to a Roman Numeral.</summary>
         public const int MinValue = 1;
@@ -79,11 +80,12 @@ namespace TheCodingMonkey.Math
 
         /// <summary>Returns the roman numeral equivalent of an integer.</summary>
         /// <param name="num">Arabic number to convert.</param>
+        /// <param name="lowerCase">True if should output lower case roman numerals. Otherwise upper case will be used. Defaults to Upper Case (false).</param>
         /// <returns>Equivalent roman numeral.</returns>
         /// <exception cref="ArgumentOutOfRangeException">Thrown if num is less than MinValue or greater than MaxValue.</exception>
         /// <remarks>This method is limited to numbers smaller than 3999 because there is no appropriate roman numeral
         /// character in ASCII to use for numbers greater than or equal to 4000.</remarks>
-        public static string IntegerToRoman( int num )
+        public static string IntegerToRoman(int num, bool lowerCase = false )
         {
             if ( ( num < MinValue ) || ( num > MaxValue ) )
                 throw new ArgumentOutOfRangeException( "num", num, "Number must be greater than MinValue and less than MaxValue" );
@@ -100,7 +102,7 @@ namespace TheCodingMonkey.Math
                 int digit = num % divisor;
 
                 if ( digit > 0 )
-                    strReturn = DigitToRoman( digit ) + strReturn;
+                    strReturn = DigitToRoman( digit, lowerCase ) + strReturn;
 			
                 num -= digit;
 
@@ -111,14 +113,18 @@ namespace TheCodingMonkey.Math
 
         /// <summary>Helper method which returns the roman numeral equivalent of a single "digit".</summary>
         /// <param name="digit">Digit to find roman numeral for.</param>
+        /// <param name="lowerCase">True if should output lower case roman numerals. Otherwise upper case will be used. Defaults to Upper Case (false).</param>
         /// <returns>Partial roman numeral string for the digit.</returns>
         /// <remarks>It's not a digit in the truest sense, because it can be larger than 9.  However, for numbers
         /// larger than 9, it must be a multiple of 10.  Digits must also be greater than zero.  These constraints
         /// are not enforced programmatically since it's just a private method.</remarks>
-        private static string DigitToRoman( int digit )
+        private static string DigitToRoman(int digit, bool lowerCase = false )
         {
             if (digit <= 0 || (digit > 10 && digit % 10 != 0))
                 throw new ArgumentException("Invalid digit - Must be a single digit, or a multiple of 10");
+
+            char[] letters = lowerCase ? LETTERS_SMALL : LETTERS;
+            char[] letters10 = lowerCase ? LETTERS_10_SMALL : LETTERS_10;
 
             // First find the roman numeral that's one larger than this one
             bool bFoundSubtract = false;
@@ -127,7 +133,7 @@ namespace TheCodingMonkey.Math
             for ( index = 0; index < NUMBERS.Length; index++ )
             {
                 if ( NUMBERS[index] == digit )  // If found an exact match, then bail immediately
-                    return LETTERS[index].ToString();
+                    return letters[index].ToString();
                 else if ( NUMBERS[index] > digit )
                 {
                     // Found the roman numeral that's one larger than this digit.
@@ -152,7 +158,7 @@ namespace TheCodingMonkey.Math
                         // Now make sure it follows the 1/10th, 1/5th rule.  If it does, return the combination
                         // Otherwise we break out and do the additive rule
                         if ( ( NUMBERS_10[idx10] * 5 ) == NUMBERS[index] || ( NUMBERS_10[idx10] * 10 ) == NUMBERS[index] )
-                            return LETTERS_10[idx10].ToString() + LETTERS[index].ToString();
+                            return letters10[idx10].ToString() + letters[index].ToString();
                         else
                             break;
                     }
@@ -164,7 +170,7 @@ namespace TheCodingMonkey.Math
             // Didn't find the subtractive rule, so need to do the additive rule
 
             index--;	// Index is currently at one larger than my number, so go back one roman numeral.
-            string strReturn = LETTERS[index].ToString();	// Start off my numeral
+            string strReturn = letters[index].ToString();	// Start off my numeral
             digit -= NUMBERS[index];						// Subtract from my running digit
 
             // Now add on as much as I need to in order to get to the rest of my number
@@ -176,8 +182,7 @@ namespace TheCodingMonkey.Math
                 for ( idxAdd = 0; idxAdd < NUMBERS_10.Length; idxAdd++ )
                 {
                     if ( NUMBERS_10[idxAdd] == digit )
-                        // Found an exact match
-                        break;
+                        break;  // Found an exact match
                     else if ( NUMBERS_10[idxAdd] > digit )
                     {
                         // Went too far, grab the previous numeral
@@ -190,7 +195,7 @@ namespace TheCodingMonkey.Math
                 if ( idxAdd == NUMBERS_10.Length )
                     idxAdd--;
 
-                strReturn += LETTERS_10[idxAdd];	// Tack on the numeral
+                strReturn += letters10[idxAdd];	    // Tack on the numeral
                 digit     -= NUMBERS_10[idxAdd];	// Subtract from my running digit
             }
 

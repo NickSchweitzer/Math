@@ -106,9 +106,12 @@ namespace TheCodingMonkey.Math
                 return new Tuple<T, int>(returnTuple.Value.Key, returnTuple.Value.Value);
         }
 
-        /// <summary>Calculates the Median (or average) of all the passed in values.</summary>
+        /// <summary>Calculates the Median of all the passed in values.</summary>
         /// <param name="items">IEnumerable of items to calculate the average of</param>
-        /// <returns>Average value of all the items passed in.</returns>
+        /// <returns>Median value of all the items in the list</returns>
+        /// <remarks>The median is the value seperating the higher half from the lower half of a data sample. If there are an
+        /// even number of values in the list, such that an exact center can't be determined, then the average of the two
+        /// middle numbers is returned.</remarks>
         public static double Median(this IEnumerable<int> items)
         {
             List<int> sortedList = new List<int>(items);
@@ -126,9 +129,12 @@ namespace TheCodingMonkey.Math
             }
         }
 
-        /// <summary>Calculates the Median (or average) of all the passed in values.</summary>
+        /// <summary>Calculates the Median of all the passed in values.</summary>
         /// <param name="items">IEnumerable of items to calculate the average of</param>
-        /// <returns>Average value of all the items passed in.</returns>
+        /// <returns>Median value of all the items in the list</returns>
+        /// <remarks>The median is the value seperating the higher half from the lower half of a data sample. If there are an
+        /// even number of values in the list, such that an exact center can't be determined, then the average of the two
+        /// middle numbers is returned.</remarks>
         public static double Median(this IEnumerable<float> items)
         {
             List<float> sortedList = new List<float>(items);
@@ -146,9 +152,12 @@ namespace TheCodingMonkey.Math
             }
         }
 
-        /// <summary>Calculates the Median (or average) of all the passed in values.</summary>
+        /// <summary>Calculates the Median of all the passed in values.</summary>
         /// <param name="items">IEnumerable of items to calculate the average of</param>
-        /// <returns>Average value of all the items passed in.</returns>
+        /// <returns>Median value of all the items in the list</returns>
+        /// <remarks>The median is the value seperating the higher half from the lower half of a data sample. If there are an
+        /// even number of values in the list, such that an exact center can't be determined, then the average of the two
+        /// middle numbers is returned.</remarks>
         public static double Median(this IEnumerable<double> items)
         {
             List<double> sortedList = new List<double>(items);
@@ -166,9 +175,12 @@ namespace TheCodingMonkey.Math
             }
         }
 
-        /// <summary>Calculates the Median (or average) of all the passed in values.</summary>
+        /// <summary>Calculates the Median of all the passed in values.</summary>
         /// <param name="items">IEnumerable of items to calculate the average of</param>
-        /// <returns>Average value of all the items passed in.</returns>
+        /// <returns>Median value of all the items in the list</returns>
+        /// <remarks>The median is the value seperating the higher half from the lower half of a data sample. If there are an
+        /// even number of values in the list, such that an exact center can't be determined, then the average of the two
+        /// middle numbers is returned.</remarks>
         public static decimal Median(this IEnumerable<decimal> items)
         {
             List<decimal> sortedList = new List<decimal>(items);

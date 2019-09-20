@@ -12,7 +12,7 @@ public static class MathExtensions
 | --- | --- |
 | static [AlmostEqual](MathExtensions/AlmostEqual.md)(…) | Extension method used to determine if two values are very close to equal, based on the Epsilon, the .NET defined potential error between equal floating point numbers. (5 methods) |
 | static [Between&lt;T&gt;](MathExtensions/Between.md)(…) | Extension method used to determine if an item is between the other two, inclusive. |
-| static [Median](MathExtensions/Median.md)(…) | Calculates the Median (or average) of all the passed in values. (4 methods) |
+| static [Median](MathExtensions/Median.md)(…) | Calculates the Median of all the passed in values. (4 methods) |
 | static [Mode&lt;T&gt;](MathExtensions/Mode.md)(…) | Extension method used to calculate the mode of a list of numbers. |
 | static [StdDeviation](MathExtensions/StdDeviation.md)(…) | Calculates the Standard Deviation (Sigma) of all the passed in values. (4 methods) |
 

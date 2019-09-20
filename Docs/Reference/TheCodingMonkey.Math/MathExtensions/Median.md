@@ -1,6 +1,6 @@
 # MathExtensions.Median method (1 of 4)
 
-Calculates the Median (or average) of all the passed in values.
+Calculates the Median of all the passed in values.
 
 ```csharp
 public static decimal Median(this IEnumerable<decimal> items)
@@ -12,7 +12,11 @@ public static decimal Median(this IEnumerable<decimal> items)
 
 ## Return Value
 
-Average value of all the items passed in.
+Median value of all the items in the list
+
+## Remarks
+
+The median is the value seperating the higher half from the lower half of a data sample. If there are an even number of values in the list, such that an exact center can't be determined, then the average of the two middle numbers is returned.
 
 ## See Also
 
@@ -23,7 +27,7 @@ Average value of all the items passed in.
 
 # MathExtensions.Median method (2 of 4)
 
-Calculates the Median (or average) of all the passed in values.
+Calculates the Median of all the passed in values.
 
 ```csharp
 public static double Median(this IEnumerable<double> items)
@@ -35,7 +39,11 @@ public static double Median(this IEnumerable<double> items)
 
 ## Return Value
 
-Average value of all the items passed in.
+Median value of all the items in the list
+
+## Remarks
+
+The median is the value seperating the higher half from the lower half of a data sample. If there are an even number of values in the list, such that an exact center can't be determined, then the average of the two middle numbers is returned.
 
 ## See Also
 
@@ -46,7 +54,7 @@ Average value of all the items passed in.
 
 # MathExtensions.Median method (3 of 4)
 
-Calculates the Median (or average) of all the passed in values.
+Calculates the Median of all the passed in values.
 
 ```csharp
 public static double Median(this IEnumerable<float> items)
@@ -58,7 +66,11 @@ public static double Median(this IEnumerable<float> items)
 
 ## Return Value
 
-Average value of all the items passed in.
+Median value of all the items in the list
+
+## Remarks
+
+The median is the value seperating the higher half from the lower half of a data sample. If there are an even number of values in the list, such that an exact center can't be determined, then the average of the two middle numbers is returned.
 
 ## See Also
 
@@ -69,7 +81,7 @@ Average value of all the items passed in.
 
 # MathExtensions.Median method (4 of 4)
 
-Calculates the Median (or average) of all the passed in values.
+Calculates the Median of all the passed in values.
 
 ```csharp
 public static double Median(this IEnumerable<int> items)
@@ -81,7 +93,11 @@ public static double Median(this IEnumerable<int> items)
 
 ## Return Value
 
-Average value of all the items passed in.
+Median value of all the items in the list
+
+## Remarks
+
+The median is the value seperating the higher half from the lower half of a data sample. If there are an even number of values in the list, such that an exact center can't be determined, then the average of the two middle numbers is returned.
 
 ## See Also
 

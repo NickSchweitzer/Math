@@ -49,11 +49,15 @@ namespace TheCodingMonkey.Math.Tests
             // different, then I can assume that they're probably both right.
             for ( int iIteration = RomanNumerals.MinValue; iIteration < RomanNumerals.MaxValue; iIteration++ )
             {
-                string strRoman = RomanNumerals.IntegerToRoman( iIteration );
-                int    iCheck   = RomanNumerals.RomanToInteger( strRoman );
+                string strUpper = RomanNumerals.IntegerToRoman(iIteration, false);
+                string strLower = RomanNumerals.IntegerToRoman(iIteration, true);
+                int upperCheck = RomanNumerals.RomanToInteger(strUpper);
+                int lowerCheck = RomanNumerals.RomanToInteger(strLower);
 
-                Assert.AreEqual( iIteration, iCheck, "{0} generated {1} which is equal to {2}", iIteration, strRoman, iCheck );
-                Console.WriteLine( "{0,4} : {1}", iIteration, strRoman );
+                Assert.AreEqual(strUpper, strLower.ToUpper());
+                Assert.AreEqual(upperCheck, lowerCheck);
+
+                Assert.AreEqual( iIteration, upperCheck, "{0} generated {1} which is equal to {2}", iIteration, strUpper, upperCheck);                
             }
         }
 

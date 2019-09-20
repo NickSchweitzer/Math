@@ -3,12 +3,13 @@
 Returns the roman numeral equivalent of an integer.
 
 ```csharp
-public static string IntegerToRoman(int num)
+public static string IntegerToRoman(int num, bool lowerCase = false)
 ```
 
 | parameter | description |
 | --- | --- |
 | num | Arabic number to convert. |
+| lowerCase | True if should output lower case roman numerals. Otherwise upper case will be used. Defaults to Upper Case (false). |
 
 ## Return Value
 
