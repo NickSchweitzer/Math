@@ -3,7 +3,7 @@
 Extension method used to calculate the mode of a list of numbers.
 
 ```csharp
-public static Tuple<T, int> Mode<T>(this IEnumerable<T> items)
+public static IList<ValueTuple<T, int>> Mode<T>(this IEnumerable<T> items)
 ```
 
 | parameter | description |
@@ -13,7 +13,7 @@ public static Tuple<T, int> Mode<T>(this IEnumerable<T> items)
 
 ## Return Value
 
-A Tuple where Item1 is the item that has the most items, and Item2 is the count of that item.
+An IList of Tuples where Value is the item that has the most items, and Count is the count of that item.
 
 ## See Also
 

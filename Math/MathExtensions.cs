@@ -80,8 +80,8 @@ namespace TheCodingMonkey.Math
         /// <summary>Extension method used to calculate the mode of a list of numbers.</summary>
         /// <typeparam name="T">Type parameters of the list being analayzed</typeparam>
         /// <param name="items">IEnumerable of items to determine the statistical mode of.</param>
-        /// <returns>A Tuple where Item1 is the item that has the most items, and Item2 is the count of that item.</returns>
-        public static Tuple<T, int> Mode<T>(this IEnumerable<T> items)
+        /// <returns>An IList of Tuples where Value is the item that has the most items, and Count is the count of that item.</returns>
+        public static IList<(T Value, int Count)> Mode<T>(this IEnumerable<T> items)
         {
             
             Dictionary<T, int> counts = new Dictionary<T, int>();
@@ -91,19 +91,21 @@ namespace TheCodingMonkey.Math
                 counts[item] = count + 1;
             }
 
-            KeyValuePair<T, int>? returnTuple = null;
+            var returnList = new List<(T Value, int Count)>();
             foreach (KeyValuePair<T, int> tuple in counts)
             {
-                if (returnTuple == null)
-                    returnTuple = tuple;
-                else if (tuple.Value > returnTuple.Value.Value)
-                    returnTuple = tuple;
+                if (returnList.Count == 0)
+                    returnList.Add((tuple.Key, tuple.Value));
+                else if (tuple.Value > returnList.First().Count)
+                {
+                    returnList.Clear();
+                    returnList.Add((tuple.Key, tuple.Value));
+                }
+                else if (tuple.Value == returnList.First().Count)
+                    returnList.Add((tuple.Key, tuple.Value));
             }
 
-            if (returnTuple == null)
-                return new Tuple<T, int>(default(T), 0);
-            else
-                return new Tuple<T, int>(returnTuple.Value.Key, returnTuple.Value.Value);
+            return returnList;
         }
 
         /// <summary>Calculates the Median of all the passed in values.</summary>
