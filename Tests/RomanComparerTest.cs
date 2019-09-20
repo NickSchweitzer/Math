@@ -38,6 +38,7 @@ namespace TheCodingMonkey.Math.Tests
             }
         }
 
+        [TestMethod]
         public void DigitComparisonTest()
         {
             RomanComparer comparer = new RomanComparer();
@@ -47,7 +48,7 @@ namespace TheCodingMonkey.Math.Tests
 
             for (int i = 0; i < upper.Length - 2; i++)
             {
-                for (int j = 1; j < upper.Length - 1; j++)
+                for (int j = i + 1; j < upper.Length - 1; j++)
                 {
                     Assert.IsTrue(comparer.Compare(upper[i], lower[j]) < 0);
                     Assert.IsTrue(comparer.Compare(lower[j], upper[i]) > 0);
