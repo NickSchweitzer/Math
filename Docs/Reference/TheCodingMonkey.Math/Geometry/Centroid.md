@@ -1,8 +1,28 @@
 # Geometry.Centroid method (1 of 2)
 
+Calculates the center of gravity for a Polygon given an array of Points.
+
 ```csharp
-public static PointF Centroid(this PointF[] points)
+public static PointF Centroid(this IList<Point> points)
 ```
+
+| parameter | description |
+| --- | --- |
+| points | Points which define the vertices of the polygon. |
+
+## Return Value
+
+The Point which represents the center of gravity.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if the IList of points contains fewer than three elements. |
+
+## Remarks
+
+The polygon is assumed to be closed, with the last point in the array not being the same as the first point in the array. This method assumes the polygon has a homogeneous density.
 
 ## See Also
 
@@ -13,9 +33,29 @@ public static PointF Centroid(this PointF[] points)
 
 # Geometry.Centroid method (2 of 2)
 
+Calculates the center of gravity for a Polygon given an array of Points.
+
 ```csharp
-public static PointF Centroid(this Point[] points)
+public static PointF Centroid(this IList<PointF> points)
 ```
+
+| parameter | description |
+| --- | --- |
+| points | Points which define the vertices of the polygon. |
+
+## Return Value
+
+The Point which represents the center of gravity.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if the IList of points contains fewer than three elements. |
+
+## Remarks
+
+The polygon is assumed to be closed, with the last point in the array not being the same as the first point in the array. This method assumes the polygon has a homogeneous density.
 
 ## See Also
 

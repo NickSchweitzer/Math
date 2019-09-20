@@ -1,5 +1,7 @@
 # RomanComparer class
 
+Comparer class for comparing strings that represent Roman Numerals.
+
 ```csharp
 public class RomanComparer : IComparer, IComparer<char>, IComparer<string>
 ```
@@ -9,7 +11,7 @@ public class RomanComparer : IComparer, IComparer<char>, IComparer<string>
 | name | description |
 | --- | --- |
 | [RomanComparer](RomanComparer/RomanComparer.md)() | The default constructor. |
-| [Compare](RomanComparer/Compare.md)(…) |  (3 methods) |
+| [Compare](RomanComparer/Compare.md)(…) | Compares two strings or chars which represent Roman Numerals. (3 methods) |
 
 ## See Also
 

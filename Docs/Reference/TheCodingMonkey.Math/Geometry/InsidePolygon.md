@@ -1,8 +1,23 @@
 # Geometry.InsidePolygon method (1 of 2)
 
+Determines whether a given point is inside a polygon defined by a list of points
+
 ```csharp
-public static bool InsidePolygon(this Point testPoint, Point[] polygon)
+public static bool InsidePolygon(this Point testPoint, IList<Point> polygon)
 ```
+
+| parameter | description |
+| --- | --- |
+| testPoint | Test Point |
+| polygon | List of points which define the boundaries of the polygon |
+
+## Return Value
+
+True if *testPoint* is in *polygon*. False otherwise.
+
+## Remarks
+
+The polygon is assumed to be closed, with the last point in the array not being the same as the first point in the array.
 
 ## See Also
 
@@ -13,9 +28,24 @@ public static bool InsidePolygon(this Point testPoint, Point[] polygon)
 
 # Geometry.InsidePolygon method (2 of 2)
 
+Determines whether a given point is inside a polygon defined by a list of points
+
 ```csharp
-public static bool InsidePolygon(this PointF testPoint, PointF[] polygon)
+public static bool InsidePolygon(this PointF testPoint, IList<PointF> polygon)
 ```
+
+| parameter | description |
+| --- | --- |
+| testPoint | Test Point |
+| polygon | List of points which define the boundaries of the polygon |
+
+## Return Value
+
+True if *testPoint* is in *polygon*. False otherwise.
+
+## Remarks
+
+The polygon is assumed to be closed, with the last point in the array not being the same as the first point in the array.
 
 ## See Also
 

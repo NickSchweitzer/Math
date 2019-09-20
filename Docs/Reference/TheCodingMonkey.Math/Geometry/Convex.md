@@ -1,8 +1,28 @@
 # Geometry.Convex method (1 of 2)
 
+Determines whether a polygon is considered Convex, where all interior angles are less than 180 degrees.
+
 ```csharp
-public static bool? Convex(this PointF[] points)
+public static bool? Convex(this IList<Point> points)
 ```
+
+| parameter | description |
+| --- | --- |
+| points | List of points which define the boundaries of the polygon |
+
+## Return Value
+
+True if the polygon is Convex, false if it is Concave, and null if it cannot be computed.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if the IList of points contains fewer than three elements. |
+
+## Remarks
+
+The polygon is assumed to be closed, with the last point in the array not being the same as the first point in the array.
 
 ## See Also
 
@@ -13,9 +33,29 @@ public static bool? Convex(this PointF[] points)
 
 # Geometry.Convex method (2 of 2)
 
+Determines whether a polygon is considered Convex, where all interior angles are less than 180 degrees.
+
 ```csharp
-public static bool? Convex(this Point[] points)
+public static bool? Convex(this IList<PointF> points)
 ```
+
+| parameter | description |
+| --- | --- |
+| points | List of points which define the boundaries of the polygon |
+
+## Return Value
+
+True if the polygon is Convex, false if it is Concave, and null if it cannot be computed.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if the IList of points contains fewer than three elements. |
+
+## Remarks
+
+The polygon is assumed to be closed, with the last point in the array not being the same as the first point in the array.
 
 ## See Also
 

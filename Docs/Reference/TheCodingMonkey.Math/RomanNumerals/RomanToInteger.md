@@ -1,8 +1,24 @@
 # RomanNumerals.RomanToInteger method (1 of 2)
 
+Returns the integer equivalent of a single roman numeral.
+
 ```csharp
 public static int RomanToInteger(char cRoman)
 ```
+
+| parameter | description |
+| --- | --- |
+| cRoman | Character to analyze. |
+
+## Return Value
+
+Decimal equivalent of that roman numeral.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if a character is passed in that is not a roman numeral. |
 
 ## See Also
 
@@ -13,9 +29,27 @@ public static int RomanToInteger(char cRoman)
 
 # RomanNumerals.RomanToInteger method (2 of 2)
 
+Calculates the integer equivalent of a multi character roman numeral.
+
 ```csharp
 public static int RomanToInteger(string strRoman)
 ```
+
+| parameter | description |
+| --- | --- |
+| strRoman | Roman numeral to analyze. |
+
+## Return Value
+
+Decimal equivalent of the roman numeral.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentNullException | Thrown if a null string is passed in. |
+| ArgumentException | Thrown if an empty string is passed in. |
+| ArgumentException | Thrown if a character is passed in that is not a roman numeral. |
 
 ## See Also
 

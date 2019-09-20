@@ -1,8 +1,19 @@
 # MathExtensions.Mode&lt;T&gt; method
 
+Extension method used to calculate the mode of a list of numbers.
+
 ```csharp
 public static Tuple<T, int> Mode<T>(this IEnumerable<T> items)
 ```
+
+| parameter | description |
+| --- | --- |
+| T | Type parameters of the list being analayzed |
+| items | IEnumerable of items to determine the statistical mode of. |
+
+## Return Value
+
+A Tuple where Item1 is the item that has the most items, and Item2 is the count of that item.
 
 ## See Also
 

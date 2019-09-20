@@ -1,5 +1,7 @@
 # RomanNumerals class
 
+Static utility class for converting between Arabic Numerals and Roman Numerals.
+
 ```csharp
 public static class RomanNumerals
 ```
@@ -8,10 +10,10 @@ public static class RomanNumerals
 
 | name | description |
 | --- | --- |
-| const [MaxValue](RomanNumerals/MaxValue.md) |  |
-| const [MinValue](RomanNumerals/MinValue.md) |  |
-| static [IntegerToRoman](RomanNumerals/IntegerToRoman.md)(…) |  |
-| static [RomanToInteger](RomanNumerals/RomanToInteger.md)(…) |  (2 methods) |
+| const [MaxValue](RomanNumerals/MaxValue.md) | Represents the largest possible integer that can be converted to a Roman Numeral. |
+| const [MinValue](RomanNumerals/MinValue.md) | Represents the smallest possible integer that can be converted to a Roman Numeral. |
+| static [IntegerToRoman](RomanNumerals/IntegerToRoman.md)(…) | Returns the roman numeral equivalent of an integer. |
+| static [RomanToInteger](RomanNumerals/RomanToInteger.md)(…) | Calculates the integer equivalent of a multi character roman numeral. (2 methods) |
 
 ## See Also
 

@@ -1,8 +1,18 @@
 # MathExtensions.Median method (1 of 4)
 
+Calculates the Median (or average) of all the passed in values.
+
 ```csharp
 public static decimal Median(this IEnumerable<decimal> items)
 ```
+
+| parameter | description |
+| --- | --- |
+| items | IEnumerable of items to calculate the average of |
+
+## Return Value
+
+Average value of all the items passed in.
 
 ## See Also
 
@@ -13,9 +23,19 @@ public static decimal Median(this IEnumerable<decimal> items)
 
 # MathExtensions.Median method (2 of 4)
 
+Calculates the Median (or average) of all the passed in values.
+
 ```csharp
 public static double Median(this IEnumerable<double> items)
 ```
+
+| parameter | description |
+| --- | --- |
+| items | IEnumerable of items to calculate the average of |
+
+## Return Value
+
+Average value of all the items passed in.
 
 ## See Also
 
@@ -26,9 +46,19 @@ public static double Median(this IEnumerable<double> items)
 
 # MathExtensions.Median method (3 of 4)
 
+Calculates the Median (or average) of all the passed in values.
+
 ```csharp
 public static double Median(this IEnumerable<float> items)
 ```
+
+| parameter | description |
+| --- | --- |
+| items | IEnumerable of items to calculate the average of |
+
+## Return Value
+
+Average value of all the items passed in.
 
 ## See Also
 
@@ -39,9 +69,19 @@ public static double Median(this IEnumerable<float> items)
 
 # MathExtensions.Median method (4 of 4)
 
+Calculates the Median (or average) of all the passed in values.
+
 ```csharp
 public static double Median(this IEnumerable<int> items)
 ```
+
+| parameter | description |
+| --- | --- |
+| items | IEnumerable of items to calculate the average of |
+
+## Return Value
+
+Average value of all the items passed in.
 
 ## See Also
 

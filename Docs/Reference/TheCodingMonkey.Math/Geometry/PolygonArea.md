@@ -1,8 +1,22 @@
 # Geometry.PolygonArea method (1 of 2)
 
+Calculates the area of a Polygon given an array of Points.
+
 ```csharp
-public static double PolygonArea(this PointF[] points)
+public static double PolygonArea(this IList<Point> points)
 ```
+
+| parameter | description |
+| --- | --- |
+| points | Points which define the vertices of the polygon. |
+
+## Return Value
+
+A double representing the area inside the polygon.
+
+## Remarks
+
+The polygon is assumed to be closed, with the last point in the array not being the same as the first point in the array.
 
 ## See Also
 
@@ -13,9 +27,29 @@ public static double PolygonArea(this PointF[] points)
 
 # Geometry.PolygonArea method (2 of 2)
 
+Calculates the area of a Polygon given an array of Points.
+
 ```csharp
-public static double PolygonArea(this Point[] points)
+public static double PolygonArea(this IList<PointF> points)
 ```
+
+| parameter | description |
+| --- | --- |
+| points | Points which define the vertices of the polygon. |
+
+## Return Value
+
+A double representing the area inside the polygon.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if the IList of points contains fewer than three elements. |
+
+## Remarks
+
+The polygon is assumed to be closed, with the last point in the array not being the same as the first point in the array.
 
 ## See Also
 

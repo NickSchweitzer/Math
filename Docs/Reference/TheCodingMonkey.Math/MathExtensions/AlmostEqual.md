@@ -1,8 +1,19 @@
 # MathExtensions.AlmostEqual method (1 of 5)
 
+Extension method used to determine if two values are very close to equal, based on the Epsilon, the .NET defined potential error between equal floating point numbers.
+
 ```csharp
 public static bool AlmostEqual(this double left, double right)
 ```
+
+| parameter | description |
+| --- | --- |
+| left | First item to be compared. |
+| right | Second item to be compared. |
+
+## Return Value
+
+Returns true if left - right is less than or equal to Epsilon, and false otherwise.
 
 ## See Also
 
@@ -13,9 +24,20 @@ public static bool AlmostEqual(this double left, double right)
 
 # MathExtensions.AlmostEqual method (2 of 5)
 
+Extension method used to determine if two values are very close to equal, based on the Epsilon, the .NET defined potential error between equal floating point numbers.
+
 ```csharp
 public static bool AlmostEqual(this float left, float right)
 ```
+
+| parameter | description |
+| --- | --- |
+| left | First item to be compared. |
+| right | Second item to be compared. |
+
+## Return Value
+
+Returns true if left - right is less than or equal to Epsilon, and false otherwise.
 
 ## See Also
 
@@ -26,9 +48,21 @@ public static bool AlmostEqual(this float left, float right)
 
 # MathExtensions.AlmostEqual method (3 of 5)
 
+Extension method used to determine if two values are very close to equal, based on the specified precision, or error amount.
+
 ```csharp
 public static bool AlmostEqual(this decimal left, decimal right, decimal precision)
 ```
+
+| parameter | description |
+| --- | --- |
+| left | First item to be compared. |
+| right | Second item to be compared. |
+| precision | Amount of error allowed in the comparison. |
+
+## Return Value
+
+Returns true if left - right is less than or equal to precision, and false otherwise.
 
 ## See Also
 
@@ -39,9 +73,21 @@ public static bool AlmostEqual(this decimal left, decimal right, decimal precisi
 
 # MathExtensions.AlmostEqual method (4 of 5)
 
+Extension method used to determine if two values are very close to equal, based on the specified precision, or error amount.
+
 ```csharp
 public static bool AlmostEqual(this double left, double right, double precision)
 ```
+
+| parameter | description |
+| --- | --- |
+| left | First item to be compared. |
+| right | Second item to be compared. |
+| precision | Amount of error allowed in the comparison. |
+
+## Return Value
+
+Returns true if left - right is less than or equal to precision, and false otherwise.
 
 ## See Also
 
@@ -52,9 +98,21 @@ public static bool AlmostEqual(this double left, double right, double precision)
 
 # MathExtensions.AlmostEqual method (5 of 5)
 
+Extension method used to determine if two values are very close to equal, based on the specified precision, or error amount.
+
 ```csharp
 public static bool AlmostEqual(this float left, float right, float precision)
 ```
+
+| parameter | description |
+| --- | --- |
+| left | First item to be compared. |
+| right | Second item to be compared. |
+| precision | Amount of error allowed in the comparison. |
+
+## Return Value
+
+Returns true if left - right is less than or equal to precision, and false otherwise.
 
 ## See Also
 

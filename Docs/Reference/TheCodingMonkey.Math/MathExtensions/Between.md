@@ -1,9 +1,22 @@
 # MathExtensions.Between&lt;T&gt; method
 
+Extension method used to determine if an item is between the other two, inclusive.
+
 ```csharp
 public static bool Between<T>(this T test, T minValue, T maxValue)
     where T : IComparable<T>
 ```
+
+| parameter | description |
+| --- | --- |
+| T | Type of item to compare. This type must implement IComparable. |
+| test | The item being tested. |
+| minValue | The lesser item to compare to. |
+| maxValue | The greater item to compare to. |
+
+## Remarks
+
+The item test is considered between if it is greater than or equal to first and less than or equal to second.
 
 ## See Also
 

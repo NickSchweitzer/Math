@@ -1,5 +1,7 @@
 # Geometry class
 
+Helper class which contains basic Geometric calculations for lines, polygons, and other shapes.
+
 ```csharp
 public static class Geometry
 ```
@@ -8,12 +10,12 @@ public static class Geometry
 
 | name | description |
 | --- | --- |
-| static [Centroid](Geometry/Centroid.md)(…) |  (2 methods) |
-| static [Concave](Geometry/Concave.md)(…) |  (2 methods) |
-| static [Convex](Geometry/Convex.md)(…) |  (2 methods) |
-| static [InsidePolygon](Geometry/InsidePolygon.md)(…) |  (2 methods) |
-| static [Length](Geometry/Length.md)(…) |  (2 methods) |
-| static [PolygonArea](Geometry/PolygonArea.md)(…) |  (2 methods) |
+| static [Centroid](Geometry/Centroid.md)(…) | Calculates the center of gravity for a Polygon given an array of Points. (2 methods) |
+| static [Concave](Geometry/Concave.md)(…) | Determines whether a polygon is considered Concave, where at least one interior angle is between 180 and 360 degrees. (2 methods) |
+| static [Convex](Geometry/Convex.md)(…) | Determines whether a polygon is considered Convex, where all interior angles are less than 180 degrees. (2 methods) |
+| static [InsidePolygon](Geometry/InsidePolygon.md)(…) | Determines whether a given point is inside a polygon defined by a list of points (2 methods) |
+| static [Length](Geometry/Length.md)(…) | Calculates the linear distance between two points (2 methods) |
+| static [PolygonArea](Geometry/PolygonArea.md)(…) | Calculates the area of a Polygon given an array of Points. (2 methods) |
 
 ## See Also
 

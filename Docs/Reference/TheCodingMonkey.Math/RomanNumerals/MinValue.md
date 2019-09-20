@@ -1,5 +1,7 @@
 # RomanNumerals.MinValue field
 
+Represents the smallest possible integer that can be converted to a Roman Numeral.
+
 ```csharp
 public const int MinValue;
 ```

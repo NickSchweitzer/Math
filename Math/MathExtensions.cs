@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace TheCodingMonkey.Math
 {
+    /// <summary>Contains various useful extension methods for numeric equality, and simple statistical calculations.</summary>
     public static class MathExtensions
     {
         /// <summary>Extension method used to determine if an item is between the other two, inclusive.</summary>
@@ -76,8 +77,13 @@ namespace TheCodingMonkey.Math
             return (System.Math.Abs(left - right) <= precision);
         }
 
+        /// <summary>Extension method used to calculate the mode of a list of numbers.</summary>
+        /// <typeparam name="T">Type parameters of the list being analayzed</typeparam>
+        /// <param name="items">IEnumerable of items to determine the statistical mode of.</param>
+        /// <returns>A Tuple where Item1 is the item that has the most items, and Item2 is the count of that item.</returns>
         public static Tuple<T, int> Mode<T>(this IEnumerable<T> items)
-        {            
+        {
+            
             Dictionary<T, int> counts = new Dictionary<T, int>();
             foreach (T item in items)
             {
@@ -100,6 +106,9 @@ namespace TheCodingMonkey.Math
                 return new Tuple<T, int>(returnTuple.Value.Key, returnTuple.Value.Value);
         }
 
+        /// <summary>Calculates the Median (or average) of all the passed in values.</summary>
+        /// <param name="items">IEnumerable of items to calculate the average of</param>
+        /// <returns>Average value of all the items passed in.</returns>
         public static double Median(this IEnumerable<int> items)
         {
             List<int> sortedList = new List<int>(items);
@@ -117,6 +126,9 @@ namespace TheCodingMonkey.Math
             }
         }
 
+        /// <summary>Calculates the Median (or average) of all the passed in values.</summary>
+        /// <param name="items">IEnumerable of items to calculate the average of</param>
+        /// <returns>Average value of all the items passed in.</returns>
         public static double Median(this IEnumerable<float> items)
         {
             List<float> sortedList = new List<float>(items);
@@ -134,6 +146,9 @@ namespace TheCodingMonkey.Math
             }
         }
 
+        /// <summary>Calculates the Median (or average) of all the passed in values.</summary>
+        /// <param name="items">IEnumerable of items to calculate the average of</param>
+        /// <returns>Average value of all the items passed in.</returns>
         public static double Median(this IEnumerable<double> items)
         {
             List<double> sortedList = new List<double>(items);
@@ -151,6 +166,9 @@ namespace TheCodingMonkey.Math
             }
         }
 
+        /// <summary>Calculates the Median (or average) of all the passed in values.</summary>
+        /// <param name="items">IEnumerable of items to calculate the average of</param>
+        /// <returns>Average value of all the items passed in.</returns>
         public static decimal Median(this IEnumerable<decimal> items)
         {
             List<decimal> sortedList = new List<decimal>(items);
@@ -168,6 +186,10 @@ namespace TheCodingMonkey.Math
             }
         }
 
+        /// <summary>Calculates the Standard Deviation (Sigma) of all the passed in values.</summary>
+        /// <param name="items">IEnumerable of items to calculate the standard deviation of</param>
+        /// <returns>Standard deviaion of all the items passed in.</returns>
+        /// <exception cref="ArgumentException">Thrown if <paramref name="items"/> doesn't contain at least 2 items.</exception>
         public static double StdDeviation(this IEnumerable<int> items)
         {
             double mean = items.Average();
@@ -186,6 +208,10 @@ namespace TheCodingMonkey.Math
             return System.Math.Sqrt(sigmaSquared);
         }
 
+        /// <summary>Calculates the Standard Deviation (Sigma) of all the passed in values.</summary>
+        /// <param name="items">IEnumerable of items to calculate the standard deviation of</param>
+        /// <returns>Standard deviaion of all the items passed in.</returns>
+        /// <exception cref="ArgumentException">Thrown if <paramref name="items"/> doesn't contain at least 2 items.</exception>
         public static double StdDeviation(this IEnumerable<float> items)
         {
             double mean = items.Average();
@@ -204,6 +230,10 @@ namespace TheCodingMonkey.Math
             return System.Math.Sqrt(sigmaSquared);
         }
 
+        /// <summary>Calculates the Standard Deviation (Sigma) of all the passed in values.</summary>
+        /// <param name="items">IEnumerable of items to calculate the standard deviation of</param>
+        /// <returns>Standard deviaion of all the items passed in.</returns>
+        /// <exception cref="ArgumentException">Thrown if <paramref name="items"/> doesn't contain at least 2 items.</exception>
         public static double StdDeviation(this IEnumerable<double> items)
         {
             double mean = items.Average();
@@ -222,6 +252,10 @@ namespace TheCodingMonkey.Math
             return System.Math.Sqrt(sigmaSquared);
         }
 
+        /// <summary>Calculates the Standard Deviation (Sigma) of all the passed in values.</summary>
+        /// <param name="items">IEnumerable of items to calculate the standard deviation of</param>
+        /// <returns>Standard deviaion of all the items passed in.</returns>
+        /// <exception cref="ArgumentException">Thrown if <paramref name="items"/> doesn't contain at least 2 items.</exception>
         public static double StdDeviation(this IEnumerable<decimal> items)
         {
             decimal mean = items.Average();

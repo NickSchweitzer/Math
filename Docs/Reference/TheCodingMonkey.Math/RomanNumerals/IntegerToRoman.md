@@ -1,8 +1,28 @@
 # RomanNumerals.IntegerToRoman method
 
+Returns the roman numeral equivalent of an integer.
+
 ```csharp
 public static string IntegerToRoman(int num)
 ```
+
+| parameter | description |
+| --- | --- |
+| num | Arabic number to convert. |
+
+## Return Value
+
+Equivalent roman numeral.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentOutOfRangeException | Thrown if num is less than MinValue or greater than MaxValue. |
+
+## Remarks
+
+This method is limited to numbers smaller than 3999 because there is no appropriate roman numeral character in ASCII to use for numbers greater than or equal to 4000.
 
 ## See Also
 

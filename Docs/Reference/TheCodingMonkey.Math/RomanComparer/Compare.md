@@ -1,8 +1,25 @@
 # RomanComparer.Compare method (1 of 3)
 
+Compares two chars which represent Roman Numerals.
+
 ```csharp
 public int Compare(char left, char right)
 ```
+
+| parameter | description |
+| --- | --- |
+| left | First Roman Numeral to compare. |
+| right | Second Roman Numeral to compare. |
+
+## Return Value
+
+Returns -1 if left is less than right, 1 if left is greater than right, and 0 if they are equal.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if either parameter is not a roman numeral. |
 
 ## See Also
 
@@ -13,9 +30,27 @@ public int Compare(char left, char right)
 
 # RomanComparer.Compare method (2 of 3)
 
+Compares two strings or chars which represent Roman Numerals.
+
 ```csharp
 public int Compare(object left, object right)
 ```
+
+| parameter | description |
+| --- | --- |
+| left | First Roman Numeral to compare. |
+| right | Second Roman Numeral to compare. |
+
+## Return Value
+
+Returns -1 if left is less than right, 1 if left is greater than right, and 0 if they are equal.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if either parameter is not a roman numeral. |
+| InvalidCastException | Thrown if either parameter is not a string or character. |
 
 ## See Also
 
@@ -26,9 +61,26 @@ public int Compare(object left, object right)
 
 # RomanComparer.Compare method (3 of 3)
 
+Compares two strings which represent Roman Numerals.
+
 ```csharp
 public int Compare(string left, string right)
 ```
+
+| parameter | description |
+| --- | --- |
+| left | First Roman Numeral to compare. |
+| right | Second Roman Numeral to compare. |
+
+## Return Value
+
+Returns -1 if left is less than right, 1 if left is greater than right, and 0 if they are equal.
+
+## Exceptions
+
+| exception | condition |
+| --- | --- |
+| ArgumentException | Thrown if either parameter is not a roman numeral. |
 
 ## See Also
 

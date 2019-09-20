@@ -1,5 +1,7 @@
 # RomanNumerals.MaxValue field
 
+Represents the largest possible integer that can be converted to a Roman Numeral.
+
 ```csharp
 public const int MaxValue;
 ```

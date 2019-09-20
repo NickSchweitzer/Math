@@ -1,8 +1,19 @@
 # Geometry.Length method (1 of 2)
 
+Calculates the linear distance between two points
+
 ```csharp
 public static double Length(Point p1, Point p2)
 ```
+
+| parameter | description |
+| --- | --- |
+| p1 | Start of the line |
+| p2 | End of the line |
+
+## Return Value
+
+Linear distance
 
 ## See Also
 
@@ -13,9 +24,20 @@ public static double Length(Point p1, Point p2)
 
 # Geometry.Length method (2 of 2)
 
+Calculates the linear distance between two points
+
 ```csharp
 public static double Length(PointF p1, PointF p2)
 ```
+
+| parameter | description |
+| --- | --- |
+| p1 | Start of the line |
+| p2 | End of the line |
+
+## Return Value
+
+Linear distance
 
 ## See Also
 
